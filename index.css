@@ -1,19 +1,11 @@
 @font-face {
     font-family: smythe;
-    src: url("/assets/Smythe-Regular.ttf")
+    src: url("/assets/Smythe-Regular.ttf");
+    font-weight: 400;
 }
 
-body{
+body {
     font-family: smythe, sans-serif;
-}
-
-.container{
-    width: 600px;
-    height: 1160px;
-    border: 6px solid rgb(49, 49, 49);
-    border-radius: 25px;
-    margin: 100px auto;
-    overflow: hidden;
 }
 
 h1 {
@@ -23,7 +15,27 @@ h1 {
     font-weight: 400;
 }
 
+body,
+h2,
 p {
+    margin: 0;
+}
+
+/* ------------------------------------------------------------------ */
+
+/* Top Bar */
+
+.container {
+    width: 600px;
+    height: 1160px;
+    border: 6px solid rgb(49, 49, 49);
+    border-radius: 20px;
+    margin: 40px auto;
+    overflow: hidden;
+}
+
+
+.restaurant-desc {
     margin: 5px 0 0 45px;
     font-size: 1.375rem;
     font-weight: 400;
@@ -36,4 +48,71 @@ header {
     background-image: url("/assets/img1.jpg");
     background-size: cover;
     background-position: 0 65%;
+    margin-bottom: 20px;
+}
+
+/* ------------------------------------------------------------------ */
+
+/* Menu Section */
+
+.menu-section {
+    padding: 0 45px;
+}
+
+.menu-item {
+    height: 140px;
+    display: flex;
+    align-items: center;
+    margin-top: 45px;
+    border-bottom: 1px solid #D2D2D2;
+    padding-bottom: 40px;
+}
+
+.meal-emoji {
+    width: 80px;
+    height: 80px;
+    opacity: 0.72;
+}
+
+.meal-details {
+    margin-left: 30px
+}
+
+.meal-name {
+    font-weight: 400;
+    font-size: 1.75rem;
+    margin-bottom: 8px
+}
+
+.meal-ingredients {
+    color: #8B8B8B;
+    font-weight: 400;
+    font-size: 1rem;
+    margin-bottom: 8px;
+}
+
+.meal-price {
+    font-weight: 400;
+    font-size: 1.25rem;
+}
+
+.add-to-cart-btn {
+    width: 50px;
+    height: 50px;
+    padding: 0 0 3px 1px;
+    font-family: "Inter";
+    margin: 0 0 0 auto;
+    background: none;
+    border: 1.5px solid #DEDEDE;
+    border-radius: 50%;
+    color: #3C3C3C;
+    font-size: 2rem;
+    font-weight: 200;
+    cursor: pointer;
+}
+
+.add-to-cart-btn:hover,
+.add-to-cart-btn:focus {
+    background: #DEDEDE;
+    transition: all 0.4s ease;
 }
