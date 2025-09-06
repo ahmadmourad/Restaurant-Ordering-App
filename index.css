@@ -48,7 +48,7 @@ header {
     background-image: url("/assets/img1.jpg");
     background-size: cover;
     background-position: 0 65%;
-    margin-bottom: 20px;
+    margin-bottom: 65px;
 }
 
 /* ------------------------------------------------------------------ */
@@ -60,18 +60,16 @@ header {
 }
 
 .menu-item {
-    height: 140px;
     display: flex;
-    align-items: center;
     margin-top: 45px;
     border-bottom: 1px solid #D2D2D2;
-    padding-bottom: 40px;
+    padding-bottom: 50px;
 }
 
 .meal-emoji {
     width: 80px;
     height: 80px;
-    opacity: 0.72;
+    opacity: 0.75;
 }
 
 .meal-details {
@@ -101,7 +99,7 @@ header {
     height: 50px;
     padding: 0 0 3px 1px;
     font-family: "Inter";
-    margin: 0 0 0 auto;
+    margin: 8px 0 0 auto;
     background: none;
     border: 1.5px solid #DEDEDE;
     border-radius: 50%;
