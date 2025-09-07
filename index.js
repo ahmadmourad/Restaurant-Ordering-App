@@ -21,4 +21,6 @@ function renderMenu(){
 renderMenu()
 
 
-function handleButtonClicks(){}
+function handleButtonsClick(){}
+
+function renderCart(){}
