@@ -28,8 +28,13 @@ function renderMenu() {
 document.addEventListener('click', handleButtonsClick)
 
 
-function handleButtonsClick() {
-    
+function handleButtonsClick(e) {
+    if (e.target.dataset.added){
+        cartArr.push(menuArray.filter(menuItem => menuItem.id == e.target.dataset.added)[0])
+        // console.log(cartArr)
+        renderCart()
+    }
+    // if (e.target.dataset.remove)
 }
 
 

@@ -31,7 +31,7 @@ p {
     border: 6px solid rgb(49, 49, 49);
     border-radius: 20px;
     margin: 40px auto;
-    overflow: hidden;
+    overflow: scroll;
 }
 
 
@@ -179,7 +179,7 @@ hr {
 }
 
 .complete-order-btn {
-    margin-top: 40px;
+    margin: 45px 0;
     padding: 18px;
     background: #16DB99;
     border: none;
