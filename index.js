@@ -36,11 +36,10 @@ function handleButtonsClick(e) {
     if (e.target.dataset.remove) {
         // console.log("Before removing", cartArr)
         // console.log("selected data attribute", e.target.dataset.remove)
-        const removedIndex = cartArr.findIndex((currentItem, index) => index == e.target.dataset.remove)
+        // const removedIndex = cartArr.findIndex((currentItem, index) => index == e.target.dataset.remove)
         // console.log("removed index value", removedIndex)
-        cartArr.splice(removedIndex, 1)
-        // console.log("After removing", cartArr)
-        // console.log(cartArr)
+        cartArr.splice(e.target.dataset.remove, 1)
+        console.log("After removing", cartArr)
         renderCart()
     }
 }
@@ -70,7 +69,7 @@ function renderCart() {
 
             cartList.parentElement.style.display = 'flex';
         }
-        
+
     }
     else {
         cartList.parentElement.style.display = 'none'
