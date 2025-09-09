@@ -28,7 +28,6 @@ function renderMenu() {
 
 document.addEventListener('click', handleButtonsClick)
 
-
 function handleButtonsClick(e) {
     if (e.target.dataset.added) {
         cartArr.push(menuArray.filter(menuItem => menuItem.id == e.target.dataset.added)[0])
@@ -47,13 +46,12 @@ function handleButtonsClick(e) {
         paymentForm.style.display = "flex"
     }
     if (e.target.dataset.pay) {
-        e.preventDefault()
+
     }
     if (e.target.dataset.closeformbtn){
         paymentForm.style.display = "none"
     }
 }
-
 
 function renderCart() {
     if (cartArr.length > 0) {
@@ -84,4 +82,15 @@ function renderCart() {
     else {
         cartList.parentElement.style.display = 'none'
     }
+}
+
+
+paymentForm.addEventListener('submit', handleFormData)
+
+
+function handleFormData(e){
+    // console.log(e)
+    e.preventDefault()
+    const paymentFormData = new FormData(paymentForm)
+    console.log(paymentFormData)
 }
