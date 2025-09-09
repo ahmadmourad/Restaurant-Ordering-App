@@ -38,7 +38,7 @@
             <form id="payment-modal">
                 <button type="button" class="close-modal-btn" data-closeformbtn="closeModal">X</button>
                 <h2 class="payment-title">Enter card details</h2>
-                <input type="text" placeholder="Enter your name" id="name-field" name="name" arialabel="Your name"
+                <input type="text" placeholder="Enter your name" id="name-field" name="name" aria-label="Your name" pattern="[a-zA-z]+" title="Enter characters only no numbers allowed"
                     required>
                 <input type="number" pattern="[0-9]{13,16}" title="Only 16 or 13 digits accepted"
                     placeholder="Enter card number" id="card-field" name="card"
