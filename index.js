@@ -90,17 +90,28 @@ paymentForm.addEventListener('submit', handleFormData)
 function handleFormData(e){
     // console.log(e)
     e.preventDefault()
-    const paymentFormData = new FormData(paymentForm)
-    // console.log(paymentFormData)
-    const name = paymentFormData.get('name')
 
-    paymentForm.reset()
+    const cardPattern = /[0-9]{13,16}/
+    const cardNumber = paymentForm.card.value
 
-    paymentForm.style.display = "none"
-    cartList.parentElement.style.display = "none"
+    if (cardPattern.test(cardNumber)){
+        
+        const paymentFormData = new FormData(paymentForm)
+        // console.log(paymentFormData)
+        const name = paymentFormData.get('name')
+    
+        paymentForm.reset()
+    
+        paymentForm.style.display = "none"
+        cartList.parentElement.style.display = "none"
+    
+        paymentDoneMsg.textContent = `Thanks,  ${name}! Your order is on its way!`
+        paymentDoneMsg.style.display = "block"
+    }
+    else {
+        alert("Wrong card data please check that you entered a valid 13 or 16 digits")
+    }
 
-    paymentDoneMsg.textContent = `Thanks,  ${name}! Your order is on its way!`
-    paymentDoneMsg.style.display = "block"
 
 
 }
