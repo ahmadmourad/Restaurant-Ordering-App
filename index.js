@@ -4,6 +4,7 @@ import { cartArr } from './data.js'
 const menuSection = document.getElementById('menu-section')
 const cartList = document.getElementById('cart-list')
 const paymentForm = document.getElementById('payment-modal')
+const paymentDoneMsg = document.getElementById('payment-done-message')
 
 renderMenu()
 
@@ -45,9 +46,7 @@ function handleButtonsClick(e) {
     if (e.target.dataset.completeorder) {
         paymentForm.style.display = "flex"
     }
-    if (e.target.dataset.pay) {
 
-    }
     if (e.target.dataset.closeformbtn){
         paymentForm.style.display = "none"
     }
@@ -92,7 +91,16 @@ function handleFormData(e){
     // console.log(e)
     e.preventDefault()
     const paymentFormData = new FormData(paymentForm)
-    
     // console.log(paymentFormData)
     const name = paymentFormData.get('name')
+
+    paymentForm.reset()
+
+    paymentForm.style.display = "none"
+    cartList.parentElement.style.display = "none"
+
+    paymentDoneMsg.textContent = `Thanks,  ${name}! Your order is on its way!`
+    paymentDoneMsg.style.display = "block"
+
+
 }
