@@ -3,6 +3,7 @@ import { cartArr } from './data.js'
 
 const menuSection = document.getElementById('menu-section')
 const cartList = document.getElementById('cart-list')
+const paymentForm = document.getElementById('payment-modal')
 
 renderMenu()
 
@@ -10,7 +11,7 @@ renderMenu()
 function renderMenu() {
 
     const menuHtml = menuArray.map(menuObj =>
-        `<div class="menu-item">
+                `<div class="menu-item">
                     <img class="meal-emoji" src="https://emojicdn.elk.sh/${menuObj.emoji}" alt="${menuObj.name} emoji">
                     <div class="meal-details">
                         <h2 class="meal-name">${menuObj.name}</h2>
@@ -42,8 +43,14 @@ function handleButtonsClick(e) {
         console.log("After removing", cartArr)
         renderCart()
     }
-    if (e.target.dataset.complete){
-        
+    if (e.target.dataset.completeorder) {
+        paymentForm.style.display = "flex"
+    }
+    if (e.target.dataset.pay) {
+        e.preventDefault()
+    }
+    if (e.target.dataset.closeformbtn){
+        paymentForm.style.display = "none"
     }
 }
 

@@ -12,8 +12,10 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Color+Emoji&display=swap" rel="stylesheet">
-    </head>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Color+Emoji&display=swap"
+        rel="stylesheet">
+</head>
 
 <body>
 
@@ -28,41 +30,20 @@
 
         <section class="cart-section" id="cart-section">
             <h2 class="cart-title">Your order</h2>
-            <ul class="cart-list" id="cart-list">  </ul>
+            <ul class="cart-list" id="cart-list"> </ul>
             <button class="complete-order-btn" data-completeorder="complete">Complete order</button>
         </section>
 
         <form id="payment-modal">
-            <h2 class="payment-title">Enter card details</h2>
-            <input 
-                type="text" 
-                placeholder="Enter your name" 
-                id="name-field" 
-                name="name-field" 
-                required
-                >
-            <input 
-                type="number" 
-                pattern="[0-9]{13,16}" 
-                placeholder="Enter card number" 
-                id="card-field" 
-                name="card-field"
-                aria-label="16-digit card number" 
-                required
-                >
-            <input 
-                type="number"
-                min="100"
-                max="999" 
-                pattern="[0-9]{3}" 
-                placeholder="Enter CVV" 
-                id="cvv-field" 
-                name="cvv-field"
-                aria-label="3-digit cvv" 
-                required
-                >
-            <button class="payment-btn" type="submit" data-pay="pay">Pay</button>
-        </form>
+                <button class="close-modal-btn" data-closeformbtn="closeModal">X</button>
+                <h2 class="payment-title">Enter card details</h2>
+                <input type="text" placeholder="Enter your name" id="name-field" name="name-field" required>
+                <input type="number" pattern="[0-9]{13,16}" placeholder="Enter card number" id="card-field"
+                    name="card-field" aria-label="16-digit card number" required>
+                <input type="number" min="100" max="999" pattern="[0-9]{3}" placeholder="Enter CVV" id="cvv-field"
+                    name="cvv-field" aria-label="3-digit cvv" required>
+                <button class="payment-btn" type="submit" data-pay="pay">Pay</button>
+            </form>
 
     </div>
 
