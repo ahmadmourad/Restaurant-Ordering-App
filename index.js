@@ -35,19 +35,14 @@ function handleButtonsClick(e) {
         renderCart()
     }
     if (e.target.dataset.remove) {
-        // console.log("Before removing", cartArr)
-        // console.log("selected data attribute", e.target.dataset.remove)
-        // const removedIndex = cartArr.findIndex((currentItem, index) => index == e.target.dataset.remove)
-        // console.log("removed index value", removedIndex)
         cartArr.splice(e.target.dataset.remove, 1)
-        console.log("After removing", cartArr)
         renderCart()
     }
     if (e.target.dataset.completeorder) {
         paymentForm.style.display = "flex"
     }
 
-    if (e.target.dataset.closeformbtn){
+    if (e.target.dataset.closeformbtn) {
         paymentForm.style.display = "none"
     }
 }
@@ -70,8 +65,6 @@ function renderCart() {
                               <span class="cart-prices">$${totalPrice}</span>
                               </p>`
 
-        // if (!cartList.parentElement.checkVisibility()) {
-        // if (window.getComputedStyle(cartList.parentElement, null).display == 'none') {
         if (cartList.parentElement.style.display === '') {
 
             cartList.parentElement.style.display = 'flex';
@@ -87,31 +80,26 @@ function renderCart() {
 paymentForm.addEventListener('submit', handleFormData)
 
 
-function handleFormData(e){
-    // console.log(e)
+function handleFormData(e) {
     e.preventDefault()
 
     const cardPattern = /[0-9]{13,16}/
     const cardNumber = paymentForm.card.value
 
-    if (cardPattern.test(cardNumber)){
-        
+    if (cardPattern.test(cardNumber)) {
+
         const paymentFormData = new FormData(paymentForm)
-        // console.log(paymentFormData)
         const name = paymentFormData.get('name')
-    
+
         paymentForm.reset()
-    
+
         paymentForm.style.display = "none"
         cartList.parentElement.style.display = "none"
-    
+
         paymentDoneMsg.textContent = `Thanks,  ${name}! Your order is on its way!`
         paymentDoneMsg.style.display = "block"
     }
     else {
         alert("Wrong card data please check that you entered a valid 13 or 16 digits")
     }
-
-
-
 }

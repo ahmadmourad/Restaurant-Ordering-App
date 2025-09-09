@@ -58,10 +58,6 @@ header {
 
 /* Menu Section */
 
-/* .menu-section {
-    padding: 0 45px;
-} */
-
 .menu-item {
     display: flex;
     margin-top: 45px;
@@ -126,7 +122,6 @@ header {
     display: none; /*flex when displayed*/
     flex-direction: column;
     margin-top: 40px;
-    /* padding: 0 45px; */
 }
 
 .cart-title {
@@ -197,7 +192,7 @@ hr {
 
 /* ------------------------------------------------------------------ */
 
-/* payment modal form */
+/* Payment modal form */
 
 form {
     display: none; /*flex when displayed*/
@@ -208,9 +203,6 @@ form {
     left: 0;
     right: 0;
     margin-inline: auto;
-    /* left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%); */
     background: white;
     padding: 50px 25px 30px 25px;
     box-shadow: 5.19px 5.19px 255.44px 0px #00000080;
