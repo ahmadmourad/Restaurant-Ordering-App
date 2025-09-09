@@ -42,6 +42,9 @@ function handleButtonsClick(e) {
         console.log("After removing", cartArr)
         renderCart()
     }
+    if (e.target.dataset.complete){
+        
+    }
 }
 
 
