@@ -92,5 +92,7 @@ function handleFormData(e){
     // console.log(e)
     e.preventDefault()
     const paymentFormData = new FormData(paymentForm)
-    console.log(paymentFormData)
+    
+    // console.log(paymentFormData)
+    const name = paymentFormData.get('name')
 }

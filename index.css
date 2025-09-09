@@ -21,10 +21,6 @@ p {
     margin: 0;
 }
 
-/* ------------------------------------------------------------------ */
-
-/* Top Bar */
-
 .container {
     width: 600px;
     height: 1160px;
@@ -34,6 +30,13 @@ p {
     overflow-y: scroll;
 }
 
+main{
+    padding: 0 45px;
+}
+
+/* ------------------------------------------------------------------ */
+
+/* Top Bar */
 
 .restaurant-desc {
     margin: 5px 0 0 45px;
@@ -55,9 +58,9 @@ header {
 
 /* Menu Section */
 
-.menu-section {
+/* .menu-section {
     padding: 0 45px;
-}
+} */
 
 .menu-item {
     display: flex;
@@ -123,7 +126,7 @@ header {
     display: none; /*flex when displayed*/
     flex-direction: column;
     margin-top: 40px;
-    padding: 0 45px;
+    /* padding: 0 45px; */
 }
 
 .cart-title {
@@ -216,7 +219,7 @@ form {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.close-modal-btn{
+.close-modal-btn {
     position: absolute;
     top: 0;
     right: 0;
@@ -272,4 +275,20 @@ input::-webkit-inner-spin-button {
     color: white;
     padding: 17px 0;
     cursor: pointer;
+}
+
+/* ------------------------------------------------------------------ */
+
+/* Payment done message */
+
+.payment-done-message {
+    display: none;
+    margin-top: 45px;
+    background: #ECFDF5;
+    padding: 50px 60px;
+    font-size: 2rem;
+    font-weight: 400;
+    color: #065F46;
+    text-align: center;
+
 }
